@@ -5,28 +5,6 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 	$scope.contato = {};
 	
 	loadRemoteData();
-	
-	$scope.atualiza = function(){
-		loadRemoteData();
-	};
-	
-	
-	$scope.alterar = function(contato){
-		$scope.contato = contato;
-	};
-	
-	
-	$scope.limpar = function(){
-		$scope.contato = {};
-	}; 
-	
-	
-	$scope.checkContato = function() {
-		 return $scope.contato.id !=null;
-		};
-	
-	
-	
 	// ---
 	// PUBLIC METHODS.
 	// ---
@@ -41,9 +19,20 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 		$scope.contato= {};
 	};
 	
+	$scope.atualiza = function(){
+		loadRemoteData();
+	};
+	
+	$scope.alterar = function(contato){
+		$scope.contato = contato;
+	};
+	
+	$scope.limpar = function(){
+		$scope.contato = {};
+	}; 
 	
 	$scope.removeContato = function() {
-        //Get confirmation, if confirmed clear the localStorage
+        //Get confirmation, if confirmed
         swal({   
             title: "Atenção!!!",   
             text: "Deseja Realmente Excluir o Contato? "+ $scope.contato.nome,   
@@ -58,8 +47,6 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
         });
         
     }
-	
-	
 	
 	// ---
 	// PRIVATE METHODS.
@@ -90,7 +77,6 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 	function removidoErro(contato) {
 		swal("Ops!", "Não foi possível excluir o contato:"+contato.mensagem, "error");
 	}
-	
 	
 	function loadTableBasic(contatos){
 		//Basic Example

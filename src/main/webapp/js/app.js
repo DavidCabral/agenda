@@ -7,7 +7,8 @@ var materialAdmin = angular.module('materialAdmin', [
     'oc.lazyLoad',
     'nouislider',
     'ngTable',
-    'ngCookies'
+    'ngCookies',
+    'ui.utils.masks'
 ])
 
 materialAdmin.directive('autoFocus', function($timeout) {

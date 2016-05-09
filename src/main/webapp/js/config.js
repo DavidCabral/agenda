@@ -8,9 +8,9 @@ materialAdmin
             //------------------------------
             // HOME
             //------------------------------
-	        .state ('home2', {
+	        .state ('agenda', {
 	            url: '/agenda',
-	            templateUrl: 'views/home2.html'
+	            templateUrl: 'views/agenda.html'
 	        })
         
 

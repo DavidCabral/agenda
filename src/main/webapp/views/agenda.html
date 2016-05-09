@@ -1,0 +1,128 @@
+<head>
+<meta charset="utf-8">
+</head>
+
+<header id="header-2" data-current-skin={{mactrl.currentSkin}}
+	data-ng-include src="'template/header_unibratec.html'"
+	data-ng-controller="headerCtrl as hctrl"></header>
+
+<section id="main">
+
+	<form novalidate name="agenda" accept-charset="ISO-8859-1">
+		<section id="content">
+
+			<div class="container" data-ng-controller="ContatoController">
+				<div class="col-sm-6">
+					<div class="card">
+
+						<div class="card-header m-b-20"
+							data-current-skin={{mactrl.currentSkin}}>
+							<h2>Contato {{contato.id}}</h2>
+
+							<button class="btn bgm-red btn-float" ng-show="contato.id!=null" ng-disabled="contato.id==null"
+								title="Excluir" style="margin-right: 110px;"
+								ng-click="removeContato();">
+								<i class="zmdi zmdi-delete"></i>
+							</button>
+
+							<button class="btn bgm-blue btn-float" title="Limpar"
+								style="margin-right: 55px;" ng-click="limpar();">
+								<i class="zmdi zmdi-assignment-o"></i>
+							</button>
+
+
+							<button class="btn bgm-green btn-float waves-effect"
+								title="Salvar" ng-disabled="agenda.$invalid"
+								ng-click="saveContato();">
+								<i class="zmdi zmdi-floppy"></i>
+							</button>
+						</div>
+
+						<br />
+						<div class="row">
+							<div class="col-sm-12">
+
+
+
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="zmdi zmdi-account"></i></span>
+									<div class="fg-line">
+										<input type="text" ng-model="contato.nome" name="nome"
+											class="form-control" required placeholder="Nome" auto-focus>
+									</div>
+									
+									<div class="form-group has-error">
+										<p ng-show="agenda.nome.$error.required" class="help-block has-error">Por Favor, informe Nome</p>											
+									</div>
+									
+								</div>
+
+
+
+								<div class="input-group">
+									<span class="input-group-addon"><i class="zmdi zmdi-local-phone"></i></span>
+									<div class="fg-line">
+											
+										<input type="text" id="e" ng-model="contato.fone" name="fone" ui-br-phone-number 
+											class="form-control" required placeholder="Fone" maxlength="15"  >	
+										
+									</div>
+									
+									<div class="form-group has-error">									
+										<p ng-show="agenda.fone.$error.required" class="help-block has-error">Por Favor, informe o telefone</p>	
+										 <p ng-show="agenda.fone.$invalid && agenda.fone.$touched && !agenda.fone.$error.required" class="help-block has-error">Telefone incorreto</p>										
+									</div>
+								</div>
+								
+								<div class="input-group">
+									<span class="input-group-addon"><i
+										class="zmdi zmdi-email"></i></span>
+									<div class="fg-line">
+										<input type="email" class="form-control" name="email"
+											ng-model="contato.email" placeholder="Email" requerid>
+									</div>
+
+									<div class="form-group"
+										ng-class="{ 'has-error' : agenda.email.$invalid && !agenda.email.$pristine , success: agenda.email.$dirty}">
+										<p ng-show="agenda.email.$invalid && !agenda.email.$pristine"
+											class="help-block">Por favor, informe um email válido</p>
+									</div>
+								</div>
+
+								<br /> <br />
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="card">
+						<div class="card-header m-b-20"
+							data-current-skin={{mactrl.currentSkin}}>
+							<h2>Lista de Contatos</h2>
+						</div>
+
+						<div class="card-body">
+							<div class="table-responsive">
+								<table ng-table="tableBasic" class="table table-hover">
+									<tr ng-repeat="c in contatos" ng-click="alterar(c)">
+										<td data-title="'ID'">{{ c.id }}</td>
+										<td data-title="'Nome'">{{ c.nome}}</td>
+										<td data-title="'Fone'">{{ c.fone }}</td>
+										<td data-title="'Email'">{{ c.email }}</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</form>
+</section>
+
+
+	<footer id="footer" data-ng-include="'template/footer.html'"></footer>
