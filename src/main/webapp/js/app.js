@@ -1,4 +1,4 @@
-var materialAdmin = angular.module('materialAdmin', [
+var agendaUnibratec = angular.module('agendaUnibratec', [
     'ngAnimate',
     'ngResource',
     'ui.router',
@@ -11,7 +11,7 @@ var materialAdmin = angular.module('materialAdmin', [
     'ui.utils.masks'
 ])
 
-materialAdmin.directive('autoFocus', function($timeout) {
+agendaUnibratec.directive('autoFocus', function($timeout) {
     return {
         restrict: 'AC',
         link: function(_scope, _element) {

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-    <!--[if IE 9 ]><html class="ie9" data-ng-app="materialAdmin" data-ng-controller="materialadminCtrl as mactrl"><![endif]-->
-    <![if IE 9 ]><html data-ng-app="materialAdmin" data-ng-controller="materialadminCtrl as mactrl"><![endif]>
+    <![if IE 9 ]><html data-ng-app="agendaUnibratec" data-ng-controller="agendaUnibratecCtrl as mactrl"><![endif]>
 
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,17 +16,19 @@
         <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
 
         <!-- CSS -->
-        <link href="css/app.min.1.css" rel="stylesheet" id="app-level">
-        <link href="css/app.min.2.css" rel="stylesheet">
-        <link href="css/demo.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet" id="app-level">
 
     </head>
+    
 
-    <body data-ng-class="{ 'sw-toggled': mactrl.layoutType === '1'}">
-
+    <body >
+   
+       <header id="header-2" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'">
+	   </header>
+   
         <data ui-view></data>
 
-
+       <footer id="footer" data-ng-include="'template/footer.html'"></footer>
 
         <!-- Core -->
         <script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
@@ -50,12 +51,7 @@
         <script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
         <script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
         <script src="vendors/bower_components/ng-table/dist/ng-table.min.js"></script>
-       
 
-        <!-- Placeholder for IE9 -->
-        <!--[if IE 9 ]>
-            <script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
-        <![endif]-->
 
         <!-- Using below vendors in order to avoid misloading on resolve -->
         <script src="vendors/bower_components/flot/jquery.flot.js"></script>
@@ -73,24 +69,12 @@
         <script src="js/app.js"></script>
         <script src="js/config.js"></script>
         <script src="js/controllers/main.js"></script>
-        <script src="js/services.js"></script>
         <script src="js/services/contatoService.js"></script>
-        <script src="js/templates.js"></script>
-        <script src="js/controllers/ui-bootstrap.js"></script>
-        <script src="js/controllers/table.js"></script>
         <script src="js/controllers/contatoController.js"></script>
 
 
         <!-- Template Modules -->
-        <script src="js/modules/template.js"></script>
-        <script src="js/modules/ui.js"></script>
-        <script src="js/modules/charts/flot.js"></script>
-        <script src="js/modules/charts/other-charts.js"></script>
         <script src="js/modules/form.js"></script>
-        <script src="js/modules/media.js"></script>
-        <script src="js/modules/components.js"></script>
-        <script src="js/modules/calendar.js"></script>
-        <script src="js/modules/demo.js"></script>
     </body>
 </html>
 

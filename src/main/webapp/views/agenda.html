@@ -2,10 +2,6 @@
 <meta charset="utf-8">
 </head>
 
-<header id="header-2" data-current-skin={{mactrl.currentSkin}}
-	data-ng-include src="'template/header_unibratec.html'"
-	data-ng-controller="headerCtrl as hctrl"></header>
-
 <section id="main">
 
 	<form novalidate name="agenda" accept-charset="ISO-8859-1">
@@ -42,8 +38,6 @@
 						<div class="row">
 							<div class="col-sm-12">
 
-
-
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="zmdi zmdi-account"></i></span>
@@ -58,8 +52,6 @@
 									
 								</div>
 
-
-
 								<div class="input-group">
 									<span class="input-group-addon"><i class="zmdi zmdi-local-phone"></i></span>
 									<div class="fg-line">
@@ -71,7 +63,7 @@
 									
 									<div class="form-group has-error">									
 										<p ng-show="agenda.fone.$error.required" class="help-block has-error">Por Favor, informe o telefone</p>	
-										 <p ng-show="agenda.fone.$invalid && agenda.fone.$touched && !agenda.fone.$error.required" class="help-block has-error">Telefone incorreto</p>										
+										<p ng-show="agenda.fone.$invalid && agenda.fone.$touched && !agenda.fone.$error.required" class="help-block has-error">Telefone incorreto</p>										
 									</div>
 								</div>
 								
@@ -83,8 +75,7 @@
 											ng-model="contato.email" placeholder="Email" requerid>
 									</div>
 
-									<div class="form-group"
-										ng-class="{ 'has-error' : agenda.email.$invalid && !agenda.email.$pristine , success: agenda.email.$dirty}">
+									<div class="form-group has-error" >
 										<p ng-show="agenda.email.$invalid && !agenda.email.$pristine"
 											class="help-block">Por favor, informe um email válido</p>
 									</div>
@@ -125,4 +116,4 @@
 </section>
 
 
-	<footer id="footer" data-ng-include="'template/footer.html'"></footer>
+	

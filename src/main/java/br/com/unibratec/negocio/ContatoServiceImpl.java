@@ -41,6 +41,7 @@ public class ContatoServiceImpl implements ContatoService {
       validaEmail(contato);
       contatos.save(contato);
     } catch (Exception e) {
+    	e.printStackTrace();
 
       if (e instanceof AgendaException)
         throw (AgendaException) e;
@@ -51,7 +52,7 @@ public class ContatoServiceImpl implements ContatoService {
 
   private void validaEmail(Contato contato) throws AgendaException {
     Contato contatoEmail = buscarContatoEmail(contato.getEmail());
-    if (contatoEmail != null && !Objects.equal(contato, contatoEmail))
+    if (contatoEmail!=null && !Objects.equal(contato, contatoEmail))
       throw new AgendaException(
           new Error(01, "O Email já foi usado para(" + contatoEmail.getNome() + ")", ""));
 

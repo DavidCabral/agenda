@@ -1,22 +1,12 @@
-materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngTableParams, contatoService) {
-	// I contain the list of friends to be rendered.
+agendaUnibratec.controller("ContatoController", function($scope,$filter, $sce, ngTableParams, contatoService) {
 	$scope.contatos = [];
-	// I contain the ngModel values for form interaction.
 	$scope.contato = {};
 	
 	loadRemoteData();
-	// ---
-	// PUBLIC METHODS.
-	// ---
-	// I process the add-friend form.
+	
 	$scope.saveContato = function() {
-		// If the data we provide is invalid, the promise will be rejected,
-		// at which point we can tell the user that something went wrong. In
-		// this case, I'm just logging to the console to keep things very
-		// simple for the demo.
 		contatoService.saveContato($scope.contato).then(saveSucesso,saveError);
-		// Reset the form once values have been consumed.
-		$scope.contato= {};
+		$scope.limpar();
 	};
 	
 	$scope.atualiza = function(){
@@ -32,7 +22,7 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 	}; 
 	
 	$scope.removeContato = function() {
-        //Get confirmation, if confirmed
+        //Dialogo de confirmação
         swal({   
             title: "Atenção!!!",   
             text: "Deseja Realmente Excluir o Contato? "+ $scope.contato.nome,   
@@ -48,10 +38,6 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
         
     }
 	
-	// ---
-	// PRIVATE METHODS.
-	// ---
-	// I apply the remote data to the local scope.
 	function applyRemoteData(contato) {
 		$scope.contatos = contato;
 		loadTableBasic(contato);
@@ -65,6 +51,8 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 	}
 	
 	function saveError(contato) {		
+		console.log(contato);
+		
         swal("Ops!", "Não foi possível salvar o contato : "+contato.mensagem, "error");
 	}
 	
@@ -79,7 +67,6 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 	}
 	
 	function loadTableBasic(contatos){
-		//Basic Example
 		 $scope.tableBasic = new ngTableParams({
 	        page: 1,            // show first page
 	        count: 10           // count per page
@@ -91,9 +78,7 @@ materialAdmin.controller("ContatoController", function($scope,$filter, $sce, ngT
 	    })
 	}
 	
-	// I load the remote data from the server.
 	function loadRemoteData() {
-		// The friendService returns a promise.
 		contatoService.getContatos().then(function(contato) {
 			applyRemoteData(contato);
 		});
