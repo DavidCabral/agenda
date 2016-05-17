@@ -1,11 +1,14 @@
 package br.com.unibratec.entidades;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 public class Contato implements Serializable{
 	private static final long serialVersionUID = -9141988067259447651L;
@@ -15,6 +18,9 @@ public class Contato implements Serializable{
 	private String nome;
 	private String fone;
 	private String email;
+	private String sexo;
+	@Temporal(TemporalType.DATE)
+	private Date   nascimento;
 	
 	public Long getId() {
 		return id;
@@ -63,6 +69,19 @@ public class Contato implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public String getSexo() {
+		return sexo;
+	}
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+	public Date getNascimento() {
+		return nascimento;
+	}
+	public void setNascimento(Date nascimento) {
+		this.nascimento = nascimento;
+	}
+	
 	
 	
 
