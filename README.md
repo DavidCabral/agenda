@@ -4,8 +4,7 @@ Agenda
 ### Unibratec 2016
 
 **Pós graduação de Engenharia de Software**
-**Arquitetura de SoftWare**
-
+**Gerência de Mudança**
 
 ### Professor
 *  [Thiago Farias] (https://github.com/thiago-farias) 
@@ -21,7 +20,8 @@ Agenda
 * [Luana Cristina] (https://github.com/luanaCristina)
 * [Pedro Jorge] (https://github.com/vakPedro)
 
-
+### Objetivo
+* Este Projeto tem a finalidade de compor notas para as disciplinas de 'Gerência de Mudança' e de 'Arquitetura de Software'
 
 ### Tecnologias
 * Spring data jpa
