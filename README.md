@@ -10,6 +10,11 @@ Agenda
 ### Professor
 *  [Thiago Farias] (https://github.com/thiago-farias) 
 
+### Disciplina
+*  Gerência de Mudanças
+** Este projeto tem como objetivo de avaliar-nos nas disciplinas 'Gerência de Mudanças' e 'Arquitetura de Software', ambas ministradas pelo profº Thiago Farias.
+
+
 ### Alunos
 * [Ana Catarina] (https://github.com/anacatarinalinx)
 * [David Cabral] (https://github.com/DavidCabral)
