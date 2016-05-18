@@ -4,6 +4,8 @@ Agenda
 ### Unibratec 2016
 
 **Pós graduação de Engenharia de Software**
+**Arquitetura de SoftWare**
+
 
 ### Professor
 *  [Thiago Farias] (https://github.com/thiago-farias) 
