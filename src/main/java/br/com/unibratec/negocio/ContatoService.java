@@ -15,4 +15,6 @@ public interface ContatoService {
 	public Contato buscarContatoEmail(String email) throws AgendaException;
 
 	public Contato buscarContato(Long id) throws AgendaException;
+	
+	public List<Contato> listarAniverssariantes(int mes) throws AgendaException;
 }

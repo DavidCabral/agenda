@@ -77,4 +77,12 @@ public class ContatoServiceImpl implements ContatoService {
     }
   }
 
+public List<Contato> listarAniverssariantes(int mes) throws AgendaException {
+	try {
+	      return contatos.listarAniverssariantes(mes);
+	    } catch (Exception e) {
+	      throw new AgendaException(new Error(01, "Não pesquisar o contato", e.getMessage()));
+	    }
+}
+
 }
