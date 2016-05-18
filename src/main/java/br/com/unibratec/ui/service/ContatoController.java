@@ -32,10 +32,10 @@ public class ContatoController {
 		}
 	}
 	
-	@RequestMapping(value = "/aniverssariantes/{mes}", method = RequestMethod.GET , produces=MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/aniversariantes/{mes}", method = RequestMethod.GET , produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<?> aniverssariantes(@PathVariable int mes){
 		try {
-			return new ResponseEntity<List<Contato>>(fachada.listarAniverssariantes(mes), HttpStatus.OK); 
+			return new ResponseEntity<List<Contato>>(fachada.listarAniversariantes(mes), HttpStatus.OK); 
 		} catch (AgendaException e) {
 			return new ResponseEntity<Error>(e.getErro(), HttpStatus.INTERNAL_SERVER_ERROR);
 		}
