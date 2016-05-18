@@ -3,7 +3,7 @@ Agenda
 
 ### Unibratec 2016
 
-**Pós graduação de Engenharia de Software**
+**PÃ³s graduaÃ§Ã£o de Engenharia de Software**
 **Arquitetura de SoftWare**
 
 
@@ -11,7 +11,7 @@ Agenda
 *  [Thiago Farias] (https://github.com/thiago-farias) 
 
 ### Alunos
-* [Ana Caratira] (https://github.com/anacatarinalinx)
+* [Ana Catarina] (https://github.com/anacatarinalinx)
 * [David Cabral] (https://github.com/DavidCabral)
 * [Luana Cristina] (https://github.com/luanaCristina)
 * [Pedro Jorge] (https://github.com/vakPedro)
@@ -24,7 +24,7 @@ Agenda
 * HirariCP
 * AngularJS
 
-Créditos
+CrÃ©ditos
 ----------------
 * [AngularJs ](https://angularjs.org/)
 * [Bootstrap ](http://getbootstrap.com)
