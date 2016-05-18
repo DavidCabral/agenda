@@ -12,5 +12,5 @@ public interface ContatoRepositorio extends CrudRepository<Contato, Long> {
 	public Contato findByEmail(String email);
 	
 	@Query("FROM Contato where EXTRACT(MONTH FROM nascimento) = :month") 
-	List<Contato> listarAniverssariantes(@Param("month") int month);
+	List<Contato> listarAniversariantes(@Param("month") int month);
 }

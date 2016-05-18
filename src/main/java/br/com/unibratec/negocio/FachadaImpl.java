@@ -30,8 +30,8 @@ public class FachadaImpl implements Fachada {
 	public Contato buscarContato(Long id) throws AgendaException {
 		return contatos.buscarContato(id);
 	}
-	public List<Contato> listarAniverssariantes(int mes) throws AgendaException {
-		return contatos.listarAniverssariantes(mes);
+	public List<Contato> listarAniversariantes(int mes) throws AgendaException {
+		return contatos.listarAniversariantes(mes);
 	}
 
 }

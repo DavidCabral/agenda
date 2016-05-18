@@ -16,6 +16,6 @@ public interface Fachada {
 
 	public Contato buscarContato(Long id) throws AgendaException;
 	
-	public List<Contato> listarAniverssariantes(int mes) throws AgendaException;
+	public List<Contato> listarAniversariantes(int mes) throws AgendaException;
 
 }

@@ -33,7 +33,7 @@ public class ContatoController {
 	}
 	
 	@RequestMapping(value = "/aniversariantes/{mes}", method = RequestMethod.GET , produces=MediaType.APPLICATION_JSON_VALUE)
-	public ResponseEntity<?> aniverssariantes(@PathVariable int mes){
+	public ResponseEntity<?> aniversariantes(@PathVariable int mes){
 		try {
 			return new ResponseEntity<List<Contato>>(fachada.listarAniversariantes(mes), HttpStatus.OK); 
 		} catch (AgendaException e) {
