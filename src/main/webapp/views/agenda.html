@@ -7,7 +7,7 @@
 		<section id="content">
 
 			<div class="container" data-ng-controller="ContatoController">
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<div class="card">
 
 						<div class="card-header m-b-20"
@@ -100,16 +100,15 @@
 
 
 
-								<div class="col-sm-6">
-									<p class="c-black f-500 m-b-20 m-t-20">Sexo</p>
-									<label class="radio radio-inline m-r-20">
-						                <input type="radio" name="sexo" ng-model="contato.sexo" value="M">
+								<div class="col-sm-4">
+									<p class="c-black f-500 m-b-20 m-t-10">Sexo</p>
+									<label>
+										<input type="radio" name="sexo" ng-model="contato.sexo" value="M">
 						                <i class="input-helper"></i>
 						                Masculino
 						            </label>
-
-						            <label class="radio radio-inline m-r-20">
-						                <input type="radio" name="sexo" ng-model="contato.sexo" value="F">
+						            <label>
+										<input type="radio" name="sexo" ng-model="contato.sexo" value="F">
 						                <i class="input-helper"></i>
 						                Feminino
 						            </label>
@@ -125,7 +124,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-6">
+				<div class="col-sm-8">
 					<div class="card">
 						<div class="card-header m-b-20"
 							data-current-skin={{mactrl.currentSkin}}>
