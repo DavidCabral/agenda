@@ -50,21 +50,40 @@
 									</div>
 								</div>
 
+
+
+								
+
+
 								<div class="input-group">
 									<span class="input-group-addon"><i class="zmdi zmdi-local-phone"></i></span>
 									<div class="fg-line">
-											
 										<input type="text" id="e" ng-model="contato.fone" name="fone" ui-br-phone-number 
 											class="form-control" required placeholder="Fone" maxlength="15"  >	
-										
 									</div>
-									
+
 									<div class="form-group has-error">									
 										<p ng-show="agenda.fone.$error.required" class="help-block has-error">Por Favor, Informe o Telefone</p>	
 										<p ng-show="agenda.fone.$invalid && agenda.fone.$touched && !agenda.fone.$error.required" class="help-block has-error">Telefone incorreto</p>										
 									</div>
 								</div>
-								
+
+
+
+								<div class="input-group">
+									<span class="input-group-addon"><i class="zmdi zmdi-local-phone"></i></span>
+									<div class="fg-line">
+										<input type="text" id="e" ng-model="contato.foneComercial" name="foneComercial" ui-br-phone-number 
+											class="form-control" placeholder="Telefone Comercial" maxlength="15"  >	
+									</div>
+									
+									<div class="form-group has-error">									
+										<p ng-show="agenda.foneComercial.$invalid && agenda.foneComercial.$touched" class="help-block has-error">Telefone incorreto</p>										
+									</div>
+								</div>
+
+
+
 								<div class="input-group">
 									<span class="input-group-addon"><i
 										class="zmdi zmdi-email"></i></span>
@@ -78,15 +97,28 @@
 											class="help-block">Por favor, Informe um Email Válido</p>
 									</div>
 								</div>
-								
+
+
+
 								<div class="col-sm-6">
-								
-								</div>
-								
-								<div class="col-sm-6">
+									<p class="c-black f-500 m-b-20 m-t-20">Sexo</p>
+									<label class="radio radio-inline m-r-20">
+						                <input type="radio" name="sexo" ng-model="contato.sexo" value="M">
+						                <i class="input-helper"></i>
+						                Masculino
+						            </label>
+
+						            <label class="radio radio-inline m-r-20">
+						                <input type="radio" name="sexo" ng-model="contato.sexo" value="F">
+						                <i class="input-helper"></i>
+						                Feminino
+						            </label>
+						            <br />
+						            <br />
+						            <br />
 								</div>
 
-								<br /> <br />
+
 
 							</div>
 						</div>

@@ -17,6 +17,7 @@ public class Contato implements Serializable{
 	private Long id;
 	private String nome;
 	private String fone;
+	private String foneComercial;
 	private String email;
 	private String sexo;
 	@Temporal(TemporalType.DATE)
@@ -81,8 +82,16 @@ public class Contato implements Serializable{
 	public void setNascimento(Date nascimento) {
 		this.nascimento = nascimento;
 	}
-	
-	
-	
+
+
+
+	public String getFoneComercial() {
+		return foneComercial;
+	}
+
+	public void setFoneComercial(String foneComercial) {
+		this.foneComercial = foneComercial;
+	}
+
 
 }
