@@ -51,10 +51,6 @@
 								</div>
 
 
-
-								
-
-
 								<div class="input-group">
 									<span class="input-group-addon"><i class="zmdi zmdi-local-phone"></i></span>
 									<div class="fg-line">
@@ -99,22 +95,31 @@
 								</div>
 
 
-
-								<div class="col-sm-4">
-									<p class="c-black f-500 m-b-20 m-t-10">Sexo</p>
-									<label>
-										<input type="radio" name="sexo" ng-model="contato.sexo" value="M">
-						                <i class="input-helper"></i>
-						                Masculino
-						            </label>
-						            <label>
-										<input type="radio" name="sexo" ng-model="contato.sexo" value="F">
-						                <i class="input-helper"></i>
-						                Feminino
-						            </label>
-						            <br />
-						            <br />
-						            <br />
+								<div class="col-sm-12">
+									<div class="col-sm-6">
+										<p class="c-black f-500 m-b-20 m-t-10">Sexo</p>
+										<label>
+											<input type="radio" name="sexo" ng-model="contato.sexo" value="M">
+							                <i class="input-helper"></i>
+							                Masculino
+							            </label>
+							            <label>
+											<input type="radio" name="sexo" ng-model="contato.sexo" value="F">
+							                <i class="input-helper"></i>
+							                Feminino
+							            </label>
+							            <br />
+							            <br />
+							            <br />
+									</div>
+									
+									
+									<div class="col-sm-6">
+										<p class="c-black f-500 m-b-20 m-t-10">Dt. Nascimento</p>
+										<div class="fg-line">
+											<input type="date" ng-model="contato.nascimento" name="nascimento" class="form-control">
+										</div>
+									</div>
 								</div>
 
 
@@ -139,6 +144,7 @@
 										<td data-title="'Nome'">{{ c.nome}}</td>
 										<td data-title="'Fone'">{{ c.fone }}</td>
 										<td data-title="'Email'">{{ c.email }}</td>
+										<td data-title="'Dt. Nascimento'">{{ c.nascimento }}</td>
 									</tr>
 								</table>
 							</div>
