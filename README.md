@@ -23,7 +23,7 @@ Agenda
 ### Tecnologias
 * Spring data jpa
 * Spring mvc
-* HirariCP
+* HikariCP
 * AngularJS
 
 Créditos
