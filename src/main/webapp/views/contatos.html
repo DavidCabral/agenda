@@ -1,0 +1,10 @@
+<div class="table-responsive">
+	<table ng-table="tableBasic" class="table table-hover">
+		<tr ng-repeat="c in contatos" ng-click="alterar(c)">
+			<td data-title="'ID'">{{ c.id }}</td>
+			<td data-title="'Nome'">{{ c.nome}}</td>
+			<td data-title="'Fone'">{{ c.fone }}</td>
+			<td data-title="'Email'">{{ c.email }}</td>
+		</tr>
+	</table>
+</div>

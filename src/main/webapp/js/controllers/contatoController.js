@@ -2,8 +2,6 @@ agendaUnibratec.controller("ContatoController", function($scope,$filter, $sce, n
 	$scope.contatos = [];
 	$scope.contato = {};
 	
-	$scope.contato.sexo = "M"
-	
 	loadRemoteData();
 	
 	$scope.saveContato = function() {
@@ -21,8 +19,6 @@ agendaUnibratec.controller("ContatoController", function($scope,$filter, $sce, n
 	
 	$scope.limpar = function(){
 		$scope.contato = {};
-		$scope.contato.sexo = "M";
-		loadRemoteData();
 	}; 
 	
 	$scope.removeContato = function() {

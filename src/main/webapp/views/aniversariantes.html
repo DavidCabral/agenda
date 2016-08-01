@@ -1,0 +1,38 @@
+<section id="content" data-ng-controller="calendarCtrl as clctrl">
+        <div class="container c-alt" data-ng-controller="ModalDemoCtrl">
+
+            <div id="calendar" data-calendar data-action-links="clctrl.actionMenu" data-select="clctrl.onSelect(start, end)"></div>
+            
+            <!-- Add event -->
+            <script type="text/ng-template" id="addEvent.html">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add an Event</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="addEvent" role="form">
+                        <div class="form-group" data-ng-class="{ 'has-error': calendarData.eventName === '' }">
+                            <label for="eventName">Event Name</label>
+                            <div class="fg-line">
+                                <input type="text" class="input-sm form-control" data-ng-model="calendarData.eventName" placeholder="eg: Sports day">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventName">Tag Color</label>
+                            <div class="event-tag" data-ng-class="{ 'active': activeState }">
+                                <span data-ng-repeat="w in tags" data-tag="{{ w }}" class="{{ w }}" data-ng-class="{ 'selected': activeState === $index }" data-ng-click="onTagClick(w, $index)"></span>
+                            </div>
+                        </div>
+
+                        <input type="hidden" data-ng-model="getStart" />
+                        <input type="hidden" data-ng-model="getEnd" />
+
+                    </form>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-ng-click="addEvent()">Add Event</button>
+                    <button type="button" class="btn btn-link" data-ng-click="eventDismiss()">Close</button>
+                </div>
+            </script>
+        </div>
+    </section>

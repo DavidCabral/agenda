@@ -2,9 +2,7 @@
 <meta charset="utf-8">
 </head>
 
-<section id="main">
 	<form novalidate name="agenda" accept-charset="ISO-8859-1">
-		<section id="content">
 
 			<div class="container" data-ng-controller="ContatoController">
 				<div class="col-sm-4">
@@ -128,33 +126,16 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="col-sm-8">
 					<div class="card">
-						<div class="card-header m-b-20"
-							data-current-skin={{mactrl.currentSkin}}>
-							<h2>Lista de Contatos</h2>
-						</div>
-
-						<div class="card-body">
-							<div class="table-responsive">
-								<table ng-table="tableBasic" class="table table-hover">
-									<tr ng-repeat="c in contatos" ng-click="alterar(c)">
-										<td data-title="'ID'">{{ c.id }}</td>
-										<td data-title="'Nome'">{{ c.nome}}</td>
-										<td data-title="'Fone'">{{ c.fone }}</td>
-										<td data-title="'Email'">{{ c.email }}</td>
-										<td data-title="'Dt. Nascimento'">{{ c.nascimento }}</td>
-									</tr>
-								</table>
-							</div>
-						</div>
+						 <div class="pm-body clearfix">
+				            <ul class="tab-nav tn-justified" data-ng-include="'template/tab_menu.html'"></ul>
+				            
+						   <data ui-view></data>
+				            
+				          </div>
+						
 					</div>
 				</div>
 			</div>
-		</section>
 	</form>
-</section>
-
-
-	
